@@ -6,6 +6,12 @@ name = "pypi"
 [packages]
 fastapi = "*"
 uvicorn = "*"
+pyyaml = "*"
+passlib = "*"
+bcrypt = "*"
+starlette = "*"
+pyjwt = "*"
+python-multipart = "*"
 
 [dev-packages]
 pylint = "*"

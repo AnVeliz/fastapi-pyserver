@@ -1,6 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from server.api.public import app_public
 from server.api.private import app_private
+from server.middleware.access_control import check_token
 
 app = FastAPI(
     title="FastAPI PyServer",
@@ -11,10 +12,9 @@ app = FastAPI(
 app.include_router(
     app_private,
     #prefix="/private",
-    dependencies=[],
+    dependencies=[Depends(check_token)],
 )
 app.include_router(
     app_public,
     #prefix="/public",
-    dependencies=[],
 )

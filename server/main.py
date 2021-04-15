@@ -1,12 +1,20 @@
 from fastapi import FastAPI
-from server.models import Account
+from server.api.public import app_public
+from server.api.private import app_private
 
-app = FastAPI()
+app = FastAPI(
+    title="FastAPI PyServer",
+    description="Simple FastAPI Python server.",
+    version="0.0.1"
+)
 
-@app.get("/health")
-async def health_check():
-    return { "Status": "I'm alive." }
-
-@app.post("/account")
-async def post_user(account: Account):
-    return account
+app.include_router(
+    app_private,
+    #prefix="/private",
+    dependencies=[],
+)
+app.include_router(
+    app_public,
+    #prefix="/public",
+    dependencies=[],
+)

@@ -1,5 +1,11 @@
 {
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
-    "python.venvFolders": [".venv"]
+    "python.venvFolders": [
+        ".venv"
+    ],
+    "python.pythonPath": ".venv\\Scripts\\python.exe",
+    "cSpell.words": [
+        "pydantic"
+    ]
 }

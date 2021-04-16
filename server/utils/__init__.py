@@ -1,2 +1,2 @@
-from .access_guard import AccessGuard
+from .tokens_handler import TokensHandler
 from .hasher import Hasher

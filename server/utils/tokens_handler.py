@@ -8,12 +8,11 @@ from server.config.all_config_readers import SECURITY_CONFIG_READER
 
 security_config_reader: SecurityConfigReader = ConfigReader().reader(SECURITY_CONFIG_READER)
 
-class AccessGuard:
-    def createToken(self, credentials) -> str:
+class TokensHandler:
+    def createToken(self, username: str) -> str:
         expiration = datetime.utcnow() + timedelta(minutes=security_config_reader.expiration())
         payload = {
-            "sub": credentials["username"],
-            "role": credentials["password"],
+            "sub": username,
             "exp": expiration
         }
         token = jwt.encode(payload, security_config_reader.secret(), algorithm=security_config_reader.algorithm())

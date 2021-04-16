@@ -4,10 +4,10 @@ from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 from starlette.status import HTTP_401_UNAUTHORIZED
 
-from server.utils.access_guard import AccessGuard
+from server.utils.tokens_handler import TokensHandler
 
-oauth_password_bearer = OAuth2PasswordBearer(tokenUrl="/token")
-access_guard = AccessGuard()
+oauth_password_bearer = OAuth2PasswordBearer(tokenUrl="/login")
+access_guard = TokensHandler()
 
 async def check_token(token: str = Depends(oauth_password_bearer)):
     try:

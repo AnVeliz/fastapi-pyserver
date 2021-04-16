@@ -10,5 +10,5 @@ class Hasher:
     def verifyPassword(self, plainTextPassword: str, hashedPassword: str) -> bool:
         try:
             return self.__passwordContext.verify(plainTextPassword, hashedPassword)
-        except Exception:
+        except Exception as e:
             return False

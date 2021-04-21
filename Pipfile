@@ -12,6 +12,8 @@ bcrypt = "*"
 starlette = "*"
 pyjwt = "*"
 python-multipart = "*"
+sqlalchemy = "*"
+psycopg2 = "*"
 
 [dev-packages]
 pylint = "*"

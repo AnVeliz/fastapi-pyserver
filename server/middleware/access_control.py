@@ -4,7 +4,7 @@ from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 from starlette.status import HTTP_401_UNAUTHORIZED
 
-from server.utils.tokens_handler import TokensHandler
+from server.services.security import TokensHandler
 
 oauth_password_bearer = OAuth2PasswordBearer(tokenUrl="/login")
 access_guard = TokensHandler()

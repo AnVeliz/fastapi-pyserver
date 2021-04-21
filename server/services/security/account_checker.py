@@ -1,4 +1,4 @@
-from server.utils import Hasher
+from .hasher import Hasher
 
 TEMPORARY_USERS_LIST = [{"username": "user", "password": "$2b$12$.su540IgA0i1mGxLq9U32uMbk14Q0VBlVXVyuTXTN9wngYUovZOUK"}]
 

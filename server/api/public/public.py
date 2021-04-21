@@ -1,8 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
 from starlette.status import HTTP_401_UNAUTHORIZED
-from server.utils.tokens_handler import TokensHandler
-from server.services.security import AccountChecker
+from server.services.security import TokensHandler, AccountChecker
 
 app_public = APIRouter()
 account_checker = AccountChecker()

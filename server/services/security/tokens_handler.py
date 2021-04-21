@@ -2,9 +2,9 @@ import jwt
 from time import time
 from datetime import datetime, timedelta
 
-from server.config.config_reader import ConfigReader
-from server.config.security_config_reader import SecurityConfigReader
-from server.config.all_config_readers import SECURITY_CONFIG_READER
+from server.services.configuration.config_reader import ConfigReader
+from server.services.configuration.security_config_reader import SecurityConfigReader
+from server.services.configuration.all_config_readers import SECURITY_CONFIG_READER
 
 security_config_reader: SecurityConfigReader = ConfigReader().reader(SECURITY_CONFIG_READER)
 

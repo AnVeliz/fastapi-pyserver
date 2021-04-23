@@ -2,6 +2,7 @@ from pydantic import BaseModel
 from fastapi import Query
 from .role import Role
 
+
 class User(BaseModel):
     id: int
     firstName: str

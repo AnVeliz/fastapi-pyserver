@@ -5,7 +5,7 @@ from .all_config_readers import (
     DATABASE_CONFIG_UNDEFINED,
     SECURITY_CONFIG_FILENAME,
     SECURITY_CONFIG_READER,
-    SECURITY_CONFIG_UNDEFINED
+    SECURITY_CONFIG_UNDEFINED,
 )
 from .config_reader import ConfigReader
 from .database_config_reader import DatabaseConfigReader

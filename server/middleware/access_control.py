@@ -9,6 +9,7 @@ from server.services.security import TokensHandler
 oauth_password_bearer = OAuth2PasswordBearer(tokenUrl="/login")
 access_guard = TokensHandler()
 
+
 async def check_token(token: str = Depends(oauth_password_bearer)):
     try:
         isValid = access_guard.checkToken(token)

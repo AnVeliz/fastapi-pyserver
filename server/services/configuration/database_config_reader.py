@@ -2,6 +2,7 @@ from os.path import dirname, join
 from yaml import load, FullLoader
 from .all_config_readers import ReaderBase, DATABASE_CONFIG_FILENAME, DATABASE_CONFIG_READER
 
+
 class DatabaseConfigReader(ReaderBase):
     def __init__(self):
         with open(join(dirname(__file__), DATABASE_CONFIG_FILENAME), "r") as databaseConfigFile:

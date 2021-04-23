@@ -1,5 +1,6 @@
 from passlib.context import CryptContext
 
+
 class Hasher:
     def __init__(self):
         self.__passwordContext = CryptContext(schemes=["bcrypt"])

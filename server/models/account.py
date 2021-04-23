@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from .user import User
 
+
 class Account(BaseModel):
     user: User
     loginName: str

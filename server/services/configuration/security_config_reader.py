@@ -2,6 +2,7 @@ from os.path import dirname, join
 from yaml import load, FullLoader
 from .all_config_readers import ReaderBase, SECURITY_CONFIG_FILENAME, SECURITY_CONFIG_READER
 
+
 class SecurityConfigReader(ReaderBase):
     def __init__(self):
         with open(join(dirname(__file__), SECURITY_CONFIG_FILENAME), "r") as securityConfigFile:

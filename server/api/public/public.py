@@ -7,9 +7,11 @@ app_public = APIRouter()
 account_checker = AccountChecker()
 tokens_handler = TokensHandler()
 
+
 @app_public.get("/health")
 async def health_check():
-    return { "Status": "I'm alive." }
+    return {"Status": "I'm alive."}
+
 
 @app_public.post("/login")
 async def login(passwordRequestForm: OAuth2PasswordRequestForm = Depends()):

@@ -27,9 +27,9 @@ python_version = "3.9"
 
 [scripts]
 runsrv = "uvicorn server:app --reload"
-flakecode = "flake8 server --max-line-length=160"
-blackcode = "black server --line-length=160"
-lintcode = "pylint server --max-line-length=160"
+flakecode = "flake8 server"
+blackcode = "black server"
+lintcode = "pylint server"
 migratedatabase = "alembic revision --autogenerate -m "
 
 [pipenv]

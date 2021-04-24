@@ -1,0 +1,5 @@
+[MASTER]
+ignore=server/services/database/alembic/versions
+
+[FORMAT]
+max-line-length=160

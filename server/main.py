@@ -1,3 +1,6 @@
+"""
+Main application start point.
+"""
 from fastapi import FastAPI, Depends
 from server.api.public import app_public
 from server.api.private import app_private

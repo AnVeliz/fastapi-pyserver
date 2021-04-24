@@ -26,11 +26,12 @@ alembic = "*"
 python_version = "3.9"
 
 [scripts]
-runsrv = "uvicorn server:app --reload"
-flakecode = "flake8 server"
-blackcode = "black server"
-lintcode = "pylint server"
-migratedatabase = "alembic revision --autogenerate -m "
+srv = "uvicorn server:app --reload"
+flake-code = "flake8 server"
+black-code = "black server"
+lint-code = "pylint server"
+migrate-db = "alembic revision --autogenerate -m "
+upgrade-db-head = "alembic upgrade head"
 
 [pipenv]
 allow_prereleases = true

@@ -19,6 +19,7 @@ psycopg2 = "*"
 flake8 = "*"
 black = "*"
 pylint = "*"
+rope = "*"
 
 [requires]
 python_version = "3.9"

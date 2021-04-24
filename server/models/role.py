@@ -1,6 +1,11 @@
+"""
+User's role account API model
+"""
 from enum import Enum
 
 
 class Role(Enum):
-    administrator = "Administrator"
-    user = "User"
+    """Roles enum"""
+
+    ADMINISTRATOR = "Administrator"
+    USER = "User"

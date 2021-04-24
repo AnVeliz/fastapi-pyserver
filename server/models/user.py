@@ -1,9 +1,14 @@
+"""
+User API model
+"""
 from pydantic import BaseModel
 from fastapi import Query
 from .role import Role
 
 
 class User(BaseModel):
+    """User API model"""
+
     id: int
     firstName: str
     middleName: str

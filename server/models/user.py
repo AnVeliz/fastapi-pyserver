@@ -1,11 +1,12 @@
 """
 User API model
 """
-from pydantic import BaseModel
+from pydantic import BaseModel  # pylint: disable=E0611
 from fastapi import Query
 from .role import Role
 
 
+# pylint: disable=R0903
 class User(BaseModel):
     """User API model"""
 

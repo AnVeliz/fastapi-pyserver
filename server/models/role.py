@@ -1,5 +1,5 @@
 """
-User's role account API model
+User's role API model
 """
 from enum import Enum
 

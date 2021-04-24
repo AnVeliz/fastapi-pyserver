@@ -18,6 +18,7 @@ psycopg2 = "*"
 [dev-packages]
 flake8 = "*"
 black = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.9"
@@ -26,6 +27,7 @@ python_version = "3.9"
 runsrv = "pipenv run uvicorn server:app --reload"
 flakecode = "flake8 server --max-line-length=120"
 blackcode = "black server --line-length=120"
+lintcode = "pylint server --max-line-length=120"
 
 [pipenv]
 allow_prereleases = true

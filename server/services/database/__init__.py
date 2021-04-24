@@ -9,4 +9,4 @@ from .role import Role
 from .user import User
 
 
-__all__ = ["Base", "Session", "Account", "DATABASE_CONFIG_UNDEFINED", "generate_database", "Role", "User"]
+__all__ = ["Base", "Session", "Account", "generate_database", "Role", "User"]

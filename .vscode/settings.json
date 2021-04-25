@@ -8,6 +8,7 @@
     "python.pythonPath": ".venv\\Scripts\\python.exe",
     "explorer.compactFolders": false,
     "cSpell.words": [
+        "bcrypt",
         "noqa",
         "postgres",
         "postgresql",
@@ -15,6 +16,7 @@
         "pydantic",
         "pylint",
         "pyserver",
-        "starlette"
+        "starlette",
+        "uvicorn"
     ]
 }

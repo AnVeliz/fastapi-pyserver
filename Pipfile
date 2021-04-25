@@ -21,6 +21,7 @@ black = "*"
 pylint = "*"
 rope = "*"
 alembic = "*"
+pyinstaller = "*"
 
 [requires]
 python_version = "3.9"
@@ -32,6 +33,7 @@ black-code = "black server"
 lint-code = "pylint server"
 migrate-db = "alembic revision --autogenerate -m "
 upgrade-db-head = "alembic upgrade head"
+make-installer = "pyinstaller --onefile --collect-all=passlib --collect-all=uvicorn ./server/main.py"
 
 [pipenv]
 allow_prereleases = true

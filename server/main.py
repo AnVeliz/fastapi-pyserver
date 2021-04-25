@@ -20,3 +20,9 @@ app.include_router(
 )
 
 generate_database()
+
+if __name__ == "__main__":
+    import uvicorn
+    print("Run uvicorn")
+    uvicorn.run("server:app", host="0.0.0.0", workers=1, port=5000)
+    print("Stop uvicorn")

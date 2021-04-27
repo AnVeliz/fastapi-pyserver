@@ -14,7 +14,7 @@ access_guard = TokensHandler()
 async def check_token(token: str = Depends(oauth_password_bearer)):
     """Check if user is active"""
     try:
-        is_valid = access_guard.checkToken(token)
+        is_valid = access_guard.check_token(token)
         if is_valid:
             return True
         else:

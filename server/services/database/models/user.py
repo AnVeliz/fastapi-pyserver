@@ -20,4 +20,4 @@ class User(Base):
     roleId = Column("role_id", Integer, ForeignKey("roles.id"))
     role = relationship("Role")
 
-    account = relationship("Account", uselist=False, back_populates="users")
+    account = relationship("Account", uselist=False, back_populates="user")

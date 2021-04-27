@@ -19,4 +19,4 @@ class Account(Base):
     isActive = Column("is_active", Boolean)
 
     userId = Column("user_id", Integer, ForeignKey("users.id"))
-    user = relationship("User", back_populates="accounts")
+    user = relationship("User", back_populates="account")

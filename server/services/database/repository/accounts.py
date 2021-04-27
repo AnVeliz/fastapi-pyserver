@@ -1,0 +1,18 @@
+"""
+A repository of Users and their Accounts
+"""
+
+from sqlalchemy.orm import Session
+from server.services.database.models import Account
+
+
+class AccountsRepository:
+    """A repository for users' accounts"""
+
+    def __init__(self, session: Session):
+        self.__session = session
+
+    def get(self, login):
+        """Get an account"""
+        account = self.__session().query(Account).filter_by(login=login).one()
+        return account

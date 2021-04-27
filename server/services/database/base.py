@@ -10,5 +10,5 @@ from server.services.configuration import ConfigReader, DatabaseConfigReader, DA
 database_config_reader: DatabaseConfigReader = ConfigReader().reader(DATABASE_CONFIG_READER)
 engine = create_engine(database_config_reader.connection())
 
-Session = sessionmaker(bind=engine)
-Base = declarative_base()
+session = sessionmaker(bind=engine)
+base = declarative_base()

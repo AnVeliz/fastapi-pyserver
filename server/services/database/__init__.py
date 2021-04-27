@@ -2,8 +2,7 @@
 Database package declaration.
 """
 
-from .base import Base, session
-from .generator import generate_database
+from .db import Session, generate_database_schema
 
 
-__all__ = ["Base", "Session", "generate_database"]
+__all__ = ["Session", "generate_database_schema"]

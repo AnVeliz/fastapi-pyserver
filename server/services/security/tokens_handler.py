@@ -1,12 +1,12 @@
 """
 It works with tokens
 """
+
 from time import time
 from datetime import datetime, timedelta
 import jwt
 from server.services.configuration.config_reader import ConfigReader
-from server.services.configuration.security_config_reader import SecurityConfigReader
-from server.services.configuration.all_config_readers import SECURITY_CONFIG_READER
+from server.services.configuration.security_config_reader import SecurityConfigReader, SECURITY_CONFIG_READER
 
 security_config_reader: SecurityConfigReader = ConfigReader().reader(SECURITY_CONFIG_READER)
 

@@ -2,9 +2,9 @@
 Configuration readers repository
 """
 
-from .security_config_reader import SecurityConfigReader
-from .database_config_reader import DatabaseConfigReader
-from .all_config_readers import ReaderBase, SECURITY_CONFIG_READER, DATABASE_CONFIG_READER
+from .security_config_reader import SecurityConfigReader, SECURITY_CONFIG_READER
+from .database_config_reader import DatabaseConfigReader, DATABASE_CONFIG_READER
+from .all_config_readers import ReaderBase
 
 
 class ConfigReader:

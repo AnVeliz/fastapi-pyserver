@@ -1,14 +1,20 @@
 """
-Database initialization logic
+Database
 """
 
+from .models.base import Base
+
 from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from server.services.configuration import ConfigReader, DatabaseConfigReader, DATABASE_CONFIG_READER
+
 
 database_config_reader: DatabaseConfigReader = ConfigReader().reader(DATABASE_CONFIG_READER)
 engine = create_engine(database_config_reader.connection())
 
-session = sessionmaker(bind=engine)
-base = declarative_base()
+Session = sessionmaker(bind=engine)
+
+
+def generate_database_schema():
+    """Generates database schema"""
+    Base.metadata.create_all(engine)

@@ -1,6 +1,7 @@
 """
 User API model
 """
+
 from pydantic import BaseModel  # pylint: disable=E0611
 from fastapi import Query
 from .role import Role

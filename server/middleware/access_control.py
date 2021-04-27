@@ -1,3 +1,7 @@
+"""
+Access guard hook
+"""
+
 from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 from starlette.status import HTTP_401_UNAUTHORIZED
@@ -8,9 +12,10 @@ access_guard = TokensHandler()
 
 
 async def check_token(token: str = Depends(oauth_password_bearer)):
+    """Check if user is active"""
     try:
-        isValid = access_guard.checkToken(token)
-        if isValid:
+        is_valid = access_guard.checkToken(token)
+        if is_valid:
             return True
         else:
             raise HTTPException(status_code=HTTP_401_UNAUTHORIZED)

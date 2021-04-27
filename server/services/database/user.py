@@ -1,9 +1,14 @@
+"""
+Users entity
+"""
 from sqlalchemy import Column, String, Integer, ForeignKey
 from sqlalchemy.orm import relationship
 from .base import Base
 
 
 class User(Base):
+    """Users entity"""
+
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True)

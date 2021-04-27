@@ -1,15 +1,23 @@
+"""
+Hashing logic
+"""
+
 from passlib.context import CryptContext
 
 
 class Hasher:
+    """It hashes passwords"""
+
     def __init__(self):
-        self.__passwordContext = CryptContext(schemes=["bcrypt"])
+        self.__password_context = CryptContext(schemes=["bcrypt"])
 
-    def hashPassword(self, password: str) -> str:
-        return self.__passwordContext.hash(password)
+    def hash_password(self, password: str) -> str:
+        """Returns hashed password"""
+        return self.__password_context.hash(password)
 
-    def verifyPassword(self, plainTextPassword: str, hashedPassword: str) -> bool:
+    def verify_password(self, plain_text_password: str, hashed_password: str) -> bool:
+        """Verifies password against its hash"""
         try:
-            return self.__passwordContext.verify(plainTextPassword, hashedPassword)
+            return self.__password_context.verify(plain_text_password, hashed_password)
         except Exception:
             return False

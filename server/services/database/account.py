@@ -1,9 +1,15 @@
+"""
+Account entity
+"""
+
 from sqlalchemy import Column, String, Integer, Boolean, ForeignKey, UniqueConstraint
 from sqlalchemy.orm import relationship
 from .base import Base
 
 
 class Account(Base):
+    """Account entity"""
+
     __tablename__ = "accounts"
     __table_args__ = (UniqueConstraint("user_id"),)
 

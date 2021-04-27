@@ -1,3 +1,6 @@
+"""
+Service of account validation
+"""
 from .hasher import Hasher
 
 TEMPORARY_USERS_LIST = [{"username": "user", "password": "$2b$12$.su540IgA0i1mGxLq9U32uMbk14Q0VBlVXVyuTXTN9wngYUovZOUK"}]
@@ -6,6 +9,9 @@ hasher = Hasher()
 
 
 class AccountChecker:
-    def isValidUser(self, username: str, password: str) -> bool:
+    """It checks users' accounts"""
+
+    def is_valid_user(self, username: str, password: str) -> bool:
+        """Checks if users are valid"""
         user = next(filter(lambda credential: credential["username"] == username, TEMPORARY_USERS_LIST), None)
-        return False if user is None else hasher.verifyPassword(password, user["password"])
+        return False if user is None else hasher.verify_password(password, user["password"])

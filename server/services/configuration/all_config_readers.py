@@ -1,12 +1,15 @@
-SECURITY_CONFIG_FILENAME = "security.yaml"
-SECURITY_CONFIG_UNDEFINED = "SECURITY_CONFIG_UNDEFINED"
-SECURITY_CONFIG_READER = "SECURITY_CONFIG_READER"
+"""
+Base configuration reader
+"""
 
-DATABASE_CONFIG_FILENAME = "database.yaml"
-DATABASE_CONFIG_UNDEFINED = "DATABASE_CONFIG_UNDEFINED"
-DATABASE_CONFIG_READER = "DATABASE_CONFIG_READER"
+CONFIG_UNDEFINED = "CONFIG_UNDEFINED"
 
 
 class ReaderBase:
-    def readerId(self) -> str:
-        return SECURITY_CONFIG_UNDEFINED
+    """
+    Base configuration reader
+    """
+
+    def reader_id(self) -> str:
+        """Unique identifier of a reader"""
+        return CONFIG_UNDEFINED

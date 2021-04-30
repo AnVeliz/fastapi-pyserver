@@ -1,8 +1,9 @@
 """
 Service of account validation
 """
-from .hasher import Hasher
+
 from server.services.database import get_accounts_repository
+from .hasher import Hasher
 
 # TEMPORARY_USERS_LIST = [{"username": "user", "password": "$2b$12$.su540IgA0i1mGxLq9U32uMbk14Q0VBlVXVyuTXTN9wngYUovZOUK"}]
 
@@ -16,5 +17,4 @@ class AccountChecker:
         """Checks if users are valid"""
         # user = next(filter(lambda credential: credential["username"] == username, TEMPORARY_USERS_LIST), None)
         account = get_accounts_repository().get(username)
-        password_hash = account.password
-        return False if account is None else hasher.verify_password(password, password_hash)
+        return False if account is None else hasher.verify_password(password, account.password)

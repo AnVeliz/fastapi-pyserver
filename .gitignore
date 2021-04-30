@@ -8,3 +8,4 @@
 dist
 build
 *.spec
+.mypy_cache

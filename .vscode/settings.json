@@ -2,8 +2,19 @@
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": ".venv\\Scripts\\flake8.exe",
+    "python.linting.flake8Args": [
+        "server"
+    ],
     "python.linting.pylintEnabled": true,
-    "python.linting.pylintPath": ".vinv\\Scripts\\pylint.exe",
+    "python.linting.pylintPath": ".venv\\Scripts\\pylint.exe",
+    "python.linting.pylintArgs": [
+        "server"
+    ],
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyPath": ".venv\\Scripts\\mypy.exe",
+    "python.linting.mypyArgs": [
+        "server"
+    ],
     "python.venvFolders": [
         ".venv"
     ],

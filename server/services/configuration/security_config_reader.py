@@ -41,6 +41,6 @@ class SecurityConfigReader(ReaderBase):
         """Returns jwt algorithm"""
         return self.__jwt_algorithm
 
-    def expiration(self) -> int:
+    def expiration(self) -> float:
         """Returns jwt token expiration time"""
-        return self.__jwt_expiration
+        return float(self.__jwt_expiration)

@@ -9,7 +9,7 @@ from server.services.database.models import Account
 class AccountsRepository:
     """A repository for users' accounts"""
 
-    def __init__(self, session: Session):
+    def __init__(self, session: Session) -> None:
         self.__session = session
 
     def get(self, login: str) -> Account:

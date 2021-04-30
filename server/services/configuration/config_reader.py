@@ -4,7 +4,7 @@ Configuration readers repository
 
 from .security_config_reader import SecurityConfigReader, SECURITY_CONFIG_READER
 from .database_config_reader import DatabaseConfigReader, DATABASE_CONFIG_READER
-from .all_config_readers import ReaderBase
+from .reader_base import ReaderBase
 
 
 class ConfigReader:

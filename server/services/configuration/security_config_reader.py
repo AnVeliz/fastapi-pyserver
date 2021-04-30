@@ -4,7 +4,7 @@ Security configuration reader
 
 from os.path import dirname, join
 from yaml import load, FullLoader
-from .all_config_readers import ReaderBase
+from .reader_base import ReaderBase
 
 SECURITY_CONFIG_FILENAME = "security.yaml"
 SECURITY_CONFIG_UNDEFINED = "SECURITY_CONFIG_UNDEFINED"

@@ -2,7 +2,7 @@
 Configuration package declaration.
 """
 
-from .all_config_readers import ReaderBase
+from .reader_base import ReaderBase
 from .config_reader import ConfigReader
 from .database_config_reader import (
     DatabaseConfigReader,

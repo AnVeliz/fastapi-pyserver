@@ -4,7 +4,7 @@ Database config reader
 
 from os.path import dirname, join
 from yaml import load, FullLoader
-from .all_config_readers import ReaderBase
+from .reader_base import ReaderBase
 
 DATABASE_CONFIG_FILENAME = "database.yaml"
 DATABASE_CONFIG_UNDEFINED = "DATABASE_CONFIG_UNDEFINED"

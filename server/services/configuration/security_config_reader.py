@@ -18,7 +18,7 @@ class SecurityConfigReader(ReaderBase):
     __jwt_algorithm = "HS256"
     __jwt_expiration = "1"
 
-    def __init__(self):
+    def __init__(self) -> None:
         try:
             with open(join(dirname(__file__), SECURITY_CONFIG_FILENAME), "r") as security_config_file:
                 config_data = load(security_config_file, Loader=FullLoader)

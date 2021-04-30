@@ -3,6 +3,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+
 [packages]
 fastapi = "*"
 uvicorn = "*"
@@ -15,6 +16,7 @@ python-multipart = "*"
 sqlalchemy = "*"
 psycopg2 = "*"
 
+
 [dev-packages]
 flake8 = "*"
 black = "*"
@@ -24,8 +26,10 @@ alembic = "*"
 pyinstaller = "*"
 mypy = "*"
 
+
 [requires]
 python_version = "3.9"
+
 
 [scripts]
 srv = "uvicorn server:app --reload"
@@ -33,9 +37,12 @@ flake-code = "flake8 server"
 black-code = "black server"
 lint-code = "pylint server"
 mypy-code = "mypy server"
+
 migrate-db = "alembic revision --autogenerate -m "
 upgrade-db-head = "alembic upgrade head"
+
 make-installer = "pyinstaller --onefile --collect-all=passlib --collect-all=uvicorn ./server/main.py"
+
 
 [pipenv]
 allow_prereleases = true

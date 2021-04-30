@@ -10,7 +10,7 @@ from .all_config_readers import ReaderBase
 class ConfigReader:
     """Configuration readers repository"""
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.__config_readers = {
             SECURITY_CONFIG_READER: SecurityConfigReader(),
             DATABASE_CONFIG_READER: DatabaseConfigReader(),

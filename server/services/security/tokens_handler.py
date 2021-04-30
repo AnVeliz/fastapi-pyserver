@@ -22,7 +22,7 @@ class TokensHandler:
 
         return token
 
-    def check_token(self, token) -> bool:
+    def check_token(self, token: str) -> bool:
         """It checks if a token is valid"""
         payload = decode(token, security_config_reader.secret(), algorithms=[security_config_reader.algorithm()])
         expiration_payload = payload.get("exp")

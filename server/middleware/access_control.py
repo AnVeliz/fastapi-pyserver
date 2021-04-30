@@ -11,7 +11,7 @@ oauth_password_bearer = OAuth2PasswordBearer(tokenUrl="/login")
 access_guard = TokensHandler()
 
 
-async def check_token(token: str = Depends(oauth_password_bearer)):
+async def check_token(token: str = Depends(oauth_password_bearer)) -> bool:
     """Check if user is active"""
     try:
         is_valid = access_guard.check_token(token)

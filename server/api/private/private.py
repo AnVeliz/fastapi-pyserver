@@ -9,6 +9,6 @@ app_private = APIRouter()
 
 
 @app_private.post("/account")
-async def post_user(account: Account):
+async def post_user(account: Account) -> object:
     """Add a new user to the system"""
     return account

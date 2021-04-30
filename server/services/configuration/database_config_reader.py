@@ -16,7 +16,7 @@ class DatabaseConfigReader(ReaderBase):
 
     __connection = "postgresql+psycopg2://postgres:root@localhost:5432/pyserver"
 
-    def __init__(self):
+    def __init__(self) -> None:
         try:
             with open(join(dirname(__file__), DATABASE_CONFIG_FILENAME), "r") as database_config_file:
                 config_data = load(database_config_file, Loader=FullLoader)

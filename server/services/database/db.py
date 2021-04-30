@@ -12,14 +12,14 @@ database_config_reader: DatabaseConfigReader = ConfigReader().reader(DATABASE_CO
 engine = create_engine(database_config_reader.connection())
 Session = sessionmaker(bind=engine)
 
-accounts_repository = AccountsRepository(Session)
+accounts_repository: AccountsRepository = AccountsRepository(Session)
 
 
-def generate_database_schema():
+def generate_database_schema() -> None:
     """Generates database schema"""
     Base.metadata.create_all(engine)
 
 
-def get_accounts_repository():
+def get_accounts_repository() -> AccountsRepository:
     """Always returns users account repository for now only"""
     return accounts_repository

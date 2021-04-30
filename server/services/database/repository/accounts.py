@@ -12,7 +12,7 @@ class AccountsRepository:
     def __init__(self, session: Session):
         self.__session = session
 
-    def get(self, login):
+    def get(self, login: str) -> Account:
         """Get an account"""
-        account = self.__session().query(Account).filter_by(login=login).one()
+        account = Account(self.__session().query(Account).filter_by(login=login).one())
         return account

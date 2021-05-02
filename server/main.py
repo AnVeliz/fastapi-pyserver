@@ -20,7 +20,6 @@ app.include_router(
     # prefix="/public",
 )
 
-generate_database_schema()
 
 if __name__ == "__main__":
     import uvicorn

@@ -38,7 +38,7 @@ black-code = "black server"
 lint-code = "pylint server"
 mypy-code = "mypy server"
 
-migrate-db = "alembic revision --autogenerate -m "
+migrate-db = "alembic revision --autogenerate --autogenerate -m "
 upgrade-db-head = "alembic upgrade head"
 
 make-installer = "pyinstaller --onefile --collect-all=passlib --collect-all=uvicorn ./server/main.py"

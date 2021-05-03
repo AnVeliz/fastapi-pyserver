@@ -6,7 +6,6 @@ from fastapi import FastAPI, Depends
 from server.api.public import app_public
 from server.api.private import app_private
 from server.middleware.access_control import check_token
-from server.services.database import generate_database_schema
 
 app = FastAPI(title="FastAPI PyServer", description="Simple FastAPI Python server.", version="0.0.1")
 

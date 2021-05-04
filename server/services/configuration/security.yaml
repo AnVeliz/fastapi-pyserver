@@ -1,4 +1,4 @@
 - jwt:
     secret: "1cadc5f5413a21d521f532c57e1e5ea31c4fe325df2x4fd54d8f5e3154562a5"
     algorithm: "HS256"
-    expire: 1
+    expire: 10000

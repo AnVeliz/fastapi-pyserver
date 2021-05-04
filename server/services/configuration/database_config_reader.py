@@ -15,6 +15,8 @@ class DatabaseConfigReader(ReaderBase):
     """Database config reader"""
 
     __connection = "postgresql+psycopg2://postgres:root@localhost:5432/pyserver"
+    __files_storage_path = "./tmp/files/"
+    __default_photo_file_name = "photo.png"
 
     def __init__(self) -> None:
         try:
@@ -22,6 +24,8 @@ class DatabaseConfigReader(ReaderBase):
                 config_data = load(database_config_file, Loader=FullLoader)
                 database_config = config_data[0]["database"]
                 self.__connection = database_config["connection"]
+                self.__files_storage_path = database_config["filesStoragePath"]
+                self.__default_photo_file_name = database_config["defaultPhotoFileName"]
         except FileNotFoundError:
             print("Database configuration file is not found.")
 
@@ -32,3 +36,11 @@ class DatabaseConfigReader(ReaderBase):
     def connection(self) -> str:
         """Returns connection string"""
         return self.__connection
+
+    def files_storage_path(self) -> str:
+        """Returns files storage path string"""
+        return self.__files_storage_path
+
+    def default_photo_file_name(self) -> str:
+        """Returns default photo file name string"""
+        return self.__default_photo_file_name

@@ -17,7 +17,7 @@ async def check_token(token: str = Depends(oauth_password_bearer)) -> bool:
         is_valid = access_guard.check_token(token)
         if is_valid:
             return True
-        else:
-            raise HTTPException(status_code=HTTP_401_UNAUTHORIZED)
-    except Exception:
+
         raise HTTPException(status_code=HTTP_401_UNAUTHORIZED)
+    except Exception as exception:
+        raise HTTPException(status_code=HTTP_401_UNAUTHORIZED) from exception
